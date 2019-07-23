@@ -8,7 +8,7 @@ end
 
 # add *.so files from /usr/local/lib 
 include_files = ["libBulletCollision.so","libLinearMath.so","libBulletDynamics.so"];
-so_hdr = "/usr/lib/x86_64-linux-gnu"
+so_hdr = "/usr/local/lib"
 for fn in include_files
   Libdl.dlopen(joinpath(so_hdr,fn), Libdl.RTLD_GLOBAL);
 end
